@@ -1,7 +1,19 @@
 /* See LICENSE file for copyright and license details. */
 
+
+/*   _                  
+    (_)                 
+     _   __  __   _ __  
+    | |  \ \/ /  | '_ \						*  
+    | |   >  <   | |_) |     - Made by Beau (ixp)
+    |_|  /_/\_\  | .__/      - Version 1.2 (Off White) 
+                 | |         - Email me at: aimhreit06@protonmail.com						           
+                 |_|         - Visit my repos at https://github.com/ixp123                                                                               
+
+ */
+
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -15,9 +27,9 @@ static const char col_gray2[]       = "#444444";
 //Font Color
 static const char col_gray3[]       = "#bbbbbb";
 //Current tag and Current Window font color
-static const char col_gray4[]       = "#eeeeee";
+static const char col_gray4[]       = "#cccccc";
 //Top bar second color and active window border color
-static const char col_cyan[]        = "#770000";
+static const char col_cyan[]        = "#707070";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -25,7 +37,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "" };
+static const char *tags[] = {"", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -44,8 +56,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[ ",      tile },    /* first entry is default */
+	{ "[ ",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 

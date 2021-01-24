@@ -6,9 +6,9 @@
      _   __  __   _ __  
     | |  \ \/ /  | '_ \						*  
     | |   >  <   | |_) |     - Made by Beau (ixp)
-    |_|  /_/\_\  | .__/      - Version 1.2 (Off White) 
-                 | |         - Email me at: aimhreit06@protonmail.com						           
-                 |_|         - Visit my repos at https://github.com/ixp123                                                                               
+    |_|  /_/\_\  | .__/      - Version 1.2 (Theme Pack & Backgrounds) 
+                 | |         - Email me at: aimhreit06@protonmail.com						          
+		 |_|         - Visit my repos at https://github.com/ixp123                                                                               
 
  */
 
@@ -18,7 +18,7 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "consolas:size=12" };
+static const char *fonts[]          = { "consolas:size=12", "fontawesome:size=24" };
 static const char dmenufont[]       = "consolas:size=12";
 //Background Color
 static const char col_gray1[]       = "#222222";
@@ -29,7 +29,35 @@ static const char col_gray3[]       = "#bbbbbb";
 //Current tag and Current Window font color
 static const char col_gray4[]       = "#cccccc";
 //Top bar second color and active window border color
-static const char col_cyan[]        = "#707070";
+
+//Themes
+
+//Off White
+static const char col_cyan[]      = "#eaeaea";
+
+//Vivid Violet
+//static const char col_cyan[]	    = "#4f11ba";
+
+//Aqua Blue
+//static const char col_cyan[]	    = "#2268a3";
+
+//Leaf Green
+//static const char col_cyan[]	    = "#11ba11";
+
+//Sunshine Yellow
+//static const char col_cyan[]      = "#ebf700";
+
+//Magma Orange
+//static const char col_cyan[]      = "#f76300";
+
+//Hot Rod Red
+//static const char col_cyan[]	    = "#f70000";
+
+//Bimbo Pink
+//static const char col_cyan[]      = "#f7009c";
+
+//Saturated Cyan
+//static const char col_cyan[]      = "#00f7ef";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -37,7 +65,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", "", "" };
+static const char *tags[] = {"", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -56,8 +84,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[ ",      tile },    /* first entry is default */
-	{ "[ ",      NULL },    /* no layout function means floating behavior */
+	{ "[]=",      tile },    /* first entry is default */
+	{ "<>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 

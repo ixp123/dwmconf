@@ -33,7 +33,7 @@ static const char col_gray4[]       = "#cccccc";
 //Themes
 
 //Off White
-static const char col_cyan[]      = "#eaeaea";
+//static const char col_cyan[]      = "#eaeaea";
 
 //Vivid Violet
 //static const char col_cyan[]	    = "#4f11ba";
@@ -58,6 +58,12 @@ static const char col_cyan[]      = "#eaeaea";
 
 //Saturated Cyan
 //static const char col_cyan[]      = "#00f7ef";
+
+//Gentoo Purple
+//static const char col_cyan[]      = "#ff00ff";
+
+//Tranquil Gray
+static const char col_cyan[]      ="#363636";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -65,7 +71,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", "", "" };
+static const char *tags[] = {"", "", "", "", "", "", "", ""};
 
 static const Rule rules[] = {
 	/* xprop(1):

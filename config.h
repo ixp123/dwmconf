@@ -8,7 +8,7 @@
     | |   >  <   | |_) |     - Made by Beau (ixp)
     |_|  /_/\_\  | .__/      - Version 1.2 (Theme Pack & Backgrounds) 
                  | |         - Email me at: aimhreit06@protonmail.com						          
-		 |_|         - Visit my repos at https://github.com/ixp123                                                                               
+		         |_|         - Visit my repos at https://github.com/ixp123                                                                               
 
  */
 
@@ -63,7 +63,7 @@ static const char col_gray4[]       = "#ebdbb2";
 //static const char col_cyan[]      = "#ff00ff";
 
 //Tranquil Gray
-static const char col_cyan[]      ="#9a8e6f";
+static const char col_cyan[]      ="#3c3836";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
@@ -77,9 +77,17 @@ static const unsigned int alphas[][3]      = {
       [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
+static const char *const autostart[] = {
+	"picom", NULL,
+	"slstatus", NULL,
+    "nitrogen --restore", NULL,
+    "pulseaudio", NULL,
+    NULL/* terminate */
+};
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", ""};
+static const char *tags[] = {"", "", "", "", "", "", "", "", "" };
+static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -98,9 +106,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "<>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
+	{ "",      monocle },
 };
 
 /* key definitions */
@@ -145,6 +153,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+    { MODKEY,                       XK_z,      togglealttag,   {0} },
   //Fullgaps functions
   { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },

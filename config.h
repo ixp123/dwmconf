@@ -18,8 +18,8 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Sans Pro:size=12", "Font Awesome:size=26" };
-static const char dmenufont[]       = "Source Sans Pro:size=12";
+static const char *fonts[]          = { "SourceSans3-Regular:size=11", "Font Awesome:size=26" };
+static const char dmenufont[]       = "SourceSans3-Regular:size=11";
 //Background Color
 static const char col_gray1[]       = "#282828";
 //Inactive Window Border Color
@@ -86,8 +86,9 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", "", "" };
-static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = {"1: ", "2: ", "3: ", "4: ", "5: ♪", "6: ", "7: ", "8: ", "9: " };
+static const char *tagsalt[] = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
+//static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -96,7 +97,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
 };
 
 /* layout(s) */
@@ -106,9 +107,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "",      tile },    /* first entry is default */
-	{ "",      NULL },    /* no layout function means floating behavior */
-	{ "",      monocle },
+	{ "[ ]=",      tile },    /* first entry is default */
+	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[[]]",      monocle },
 };
 
 /* key definitions */

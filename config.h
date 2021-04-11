@@ -14,7 +14,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int gappx     = 6;        /* gaps between windows */
+static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -78,15 +78,14 @@ static const unsigned int alphas[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"picom", NULL,
+	"picomstart", NULL,
 	"slstatus", NULL,
-    "nitrogen --restore", NULL,
     "pulseaudio", NULL,
     NULL/* terminate */
 };
 
 /* tagging */
-static const char *tags[] = {"1: ", "2: ", "3: ", "4: ", "5: ♪", "6: ", "7: ", "8: ", "9: " };
+static const char *tags[] = {"", "", "", "", "", "", "", "", "" };
 static const char *tagsalt[] = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 //static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
